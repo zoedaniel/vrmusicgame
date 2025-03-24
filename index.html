@@ -10,18 +10,17 @@
         <img
         id="sky"
         src="lincolncenter.jpg">
-        <img
-          id="sidewalk"
-          src="https://www.photos-public-domain.com/wp-content/uploads/2012/10/tan-brick-pavers-sidewalk-texture.jpg">
+      <a-asset-item 
+        id="subway" 
+        src="Bedford-Nostrand%20G.gltf"></a-asset-item>
       </a-assets>
       <a-sky
-      src="#sky"> </a-sky>
-      <a-plane
-        src="#sidewalk"
-        rotation="-90 0 0"
-        width="20"
-        height="20"> 
-      </a-plane> 
+      src="#sky"> </a-sky> 
+      <a-gltf-model 
+        src="#subway"
+        position="0 0 0"
+        scale="1 1 1">
+      </a-gltf-model>
     </a-scene>
   </body>
 </html>

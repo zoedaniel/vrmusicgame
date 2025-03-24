@@ -10,22 +10,21 @@
         <img
         id="sky"
         src="lincolncenter.jpg">
-      <a-asset-item 
-        id="subway" 
-        src="Bedford-NostrandG.gltf"></a-asset-item>
+        <a-asset-item
+        id="violin"
+        src="Violin.glb">
+        </a-asset-item>
       </a-assets>
-     <a-gltf-model 
-       src="#subway"
-       position="0 0 0"
-      scale="1 1 1">
-     </a-gltf-model>
-     <a-box 
+     <a-box
        color="red" 
        position="0 2 -5"> 
      </a-box>
-      <a-sky
-        src="#sky">
-      </a-sky>
+     <a-sky
+       src="#sky">
+     </a-sky>
+     <a-gltf-model
+       src="violin">
+     </a-gltf-model>
     </a-scene>
   </body>
 </html>

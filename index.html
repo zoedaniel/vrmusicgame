@@ -14,6 +14,10 @@
         id="violin"
         src="Violin.glb">
         </a-asset-item>
+        <img
+           id="ground"
+           src="brick.png"
+         >
       </a-assets>
      <a-box
        color="red" 
@@ -27,6 +31,12 @@
        scale="0.1 0.1 0.1" 
        position="0 2 -4">
      </a-gltf-model>
+     <a-plane
+        src="#ground"
+        rotation="-90 0 0"
+        width="20"
+        height="20"> 
+     </a-plane>
     </a-scene>
   </body>
 </html>

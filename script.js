@@ -11,6 +11,10 @@ var tooManyStudentNotes = ['A', 'D', 'C', 'B', 'A', 'G'];
 
 // 3. Compare the lists and identity/record differences 
 function compareNotes(goldenNotes, studentNotes) {
+  if (goldenNotes.length != studentNotes.length) {
+    console.log('Incorrect number of notes. Please try again.');
+    return;
+  }
   for (let i = 0; i < goldenNotes.length; i++) {
     console.log(i);
     console.log(goldenNotes[i])

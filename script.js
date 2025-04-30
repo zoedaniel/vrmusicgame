@@ -17,13 +17,19 @@ function compareNotes(goldenNotes, studentNotes) {
   }
   for (let i = 0; i < goldenNotes.length; i++) {
     console.log(i);
-    console.log(goldenNotes[i])
-    console.log(studentNotes[i])
+    console.log(goldenNotes[i]);
+    console.log(studentNotes[i]);
+    if (goldenNotes[i] != studentNotes[i]) {
+      console.log('Uh oh. You made a mistake!');
+      console.log(`Expected note: ${goldenNotes[i]}, but got: ${studentNotes[i]}!`);
+    }
   }
 }
 
 // 4. Tell user what differences/mistakes were
 compareNotes(goldenNotes, perfectStudentNotes);
+compareNotes(goldenNotes, incorrectStudentNotes);
+compareNotes(goldenNotes, tooManyStudentNotes);
 
 // Try again!
 

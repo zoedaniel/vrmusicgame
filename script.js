@@ -13,6 +13,8 @@ var tooManyStudentNotes = ['A', 'D', 'C', 'B', 'A', 'G'];
 function compareNotes(goldenNotes, studentNotes) {
   for (let i = 0; i < goldenNotes.length; i++) {
     console.log(i);
+    console.log(goldenNotes[i])
+    console.log(studentNotes[i])
   }
 }
 

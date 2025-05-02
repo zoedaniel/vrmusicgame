@@ -55,5 +55,7 @@ console.log(resultsPerfect);
 console.log(resultsIncorrect);
 console.log(resultsTooMany);
 
+// Reset value of resultsText
+var resultsTextElement = document.querySelector('#results-text');
+resultsTextElement.value = resultsIncorrect;
 // Try again!
-

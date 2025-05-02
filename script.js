@@ -11,10 +11,16 @@ var tooManyStudentNotes = ['A', 'D', 'C', 'B', 'A', 'G'];
 
 // 3. Compare the lists and identity/record differences 
 function compareNotes(goldenNotes, studentNotes) {
+  // Introduce variable to record/store results to show user
+  var resultsText = "";
+  
+  // Check if user plays correct number of notes 
   if (goldenNotes.length != studentNotes.length) {
-    console.log('Incorrect number of notes. Please try again.');
-    return;
+    resultsText = 'Incorrect number of notes. Please try again.';
+    return resultsText;
   }
+  // Introduce list to record/store any mistakes
+  var mistakes = [];
   for (let i = 0; i < goldenNotes.length; i++) {
     console.log(i);
     console.log(goldenNotes[i]);
@@ -22,14 +28,32 @@ function compareNotes(goldenNotes, studentNotes) {
     if (goldenNotes[i] != studentNotes[i]) {
       console.log('Uh oh. You made a mistake!');
       console.log(`Expected note: ${goldenNotes[i]}, but got: ${studentNotes[i]}!`);
+      mistakes.push(`Expected note: ${goldenNotes[i]}, but got: ${studentNotes[i]} at position ${i+1}.`);
     }
   }
+  // Tell user if there are any mistakes
+  console.log(mistakes);
+  if (mistakes.length === 0) {
+    resultsText = "You played perfectly!";
+  }
+  else {
+    resultsText = `Uh oh. You made ${mistakes.length} mistakes.`;
+    for (let j = 0; j < mistakes.length; j++) {
+      resultsText += "\n";
+      resultsText += mistakes[j];
+    }
+  }
+  return resultsText;
 }
 
 // 4. Tell user what differences/mistakes were
-compareNotes(goldenNotes, perfectStudentNotes);
-compareNotes(goldenNotes, incorrectStudentNotes);
-compareNotes(goldenNotes, tooManyStudentNotes);
+var resultsPerfect = compareNotes(goldenNotes, perfectStudentNotes);
+var resultsIncorrect = compareNotes(goldenNotes, incorrectStudentNotes);
+var resultsTooMany = compareNotes(goldenNotes, tooManyStudentNotes);
+
+console.log(resultsPerfect);
+console.log(resultsIncorrect);
+console.log(resultsTooMany);
 
 // Try again!
 

@@ -47,6 +47,10 @@
       <audio 
       id="violin-audio"
       src="Virtual-Piano-4_14_07 PM.wav"></audio>
+      <a-asset-item
+        id="guitar"
+        src="guitar.glb">
+        </a-asset-item>
       </a-assets>
      
      <a-sky
@@ -110,6 +114,11 @@
       <a-sound 
     src="#violin-audio"
     autoplay="true"></a-sound>
+      <a-gltf-model
+       src="#guitar"
+       scale="1 1 1" 
+       position="1 1 1">
+     </a-gltf-model>
     </a-scene>
     <script src='script.js'></script>
   </body>

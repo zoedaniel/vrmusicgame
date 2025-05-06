@@ -46,21 +46,26 @@ function compareNotes(goldenNotes, studentNotes) {
   return resultsText;
 }
 
-// 4. Tell user what differences/mistakes were
+// 4. Compare notes with selected recording between perfect, incorrect, and too many. show results to user.
 
 document.addEventListener('keydown', function(event) {
   if (event.key === 'Enter') { // if enter key is pressed, compare with perfect notes
     var resultsPerfect = compareNotes(goldenNotes, perfectStudentNotes);
     console.log(resultsPerfect);
+    var resultsTextElement = document.querySelector('#results-text');
+    console.log(resultsTextElement);
+    resultsTextElement.value = resultsPerfect;
   } else if (event.key === 'Escape') { // Check if the pressed key is Escape
     var resultsIncorrect = compareNotes(goldenNotes, incorrectStudentNotes);
     console.log(resultsIncorrect);
+    var resultsTextElement = document.querySelector('#results-text');
+    console.log(resultsTextElement);
+    resultsTextElement.value = resultsIncorrect;
   } else if (event.key === 'q') {
     var resultsTooMany = compareNotes(goldenNotes, tooManyStudentNotes);
     console.log(resultsTooMany);
+    var resultsTextElement = document.querySelector('#results-text');
+    console.log(resultsTextElement);
+    resultsTextElement.value = resultsTooMany;
 });
 
-// Reset value of resultsText
-var resultsTextElement = document.querySelector('#results-text');
-resultsTextElement.value = resultsIncorrect;
-// Try again!

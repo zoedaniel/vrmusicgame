@@ -67,5 +67,4 @@ document.addEventListener('keydown', function(event) {
     var resultsTextElement = document.querySelector('#results-text');
     console.log(resultsTextElement);
     resultsTextElement.value = resultsTooMany;
-});
-
+}});

@@ -55,11 +55,10 @@ document.addEventListener('keydown', function(event) {
   } else if (event.key === 'Escape') { // Check if the pressed key is Escape
     var resultsIncorrect = compareNotes(goldenNotes, incorrectStudentNotes);
     console.log(resultsIncorrect);
-  }
+  } else if (event.key === 'q') {
+    var resultsTooMany = compareNotes(goldenNotes, tooManyStudentNotes);
+    console.log(resultsTooMany);
 });
-
-var resultsTooMany = compareNotes(goldenNotes, tooManyStudentNotes);
-console.log(resultsTooMany);
 
 // Reset value of resultsText
 var resultsTextElement = document.querySelector('#results-text');

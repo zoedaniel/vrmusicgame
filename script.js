@@ -47,12 +47,18 @@ function compareNotes(goldenNotes, studentNotes) {
 }
 
 // 4. Tell user what differences/mistakes were
-var resultsPerfect = compareNotes(goldenNotes, perfectStudentNotes);
-var resultsIncorrect = compareNotes(goldenNotes, incorrectStudentNotes);
-var resultsTooMany = compareNotes(goldenNotes, tooManyStudentNotes);
 
-console.log(resultsPerfect);
-console.log(resultsIncorrect);
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') { // if enter key is pressed, compare with perfect notes
+    var resultsPerfect = compareNotes(goldenNotes, perfectStudentNotes);
+    console.log(resultsPerfect);
+  } else if (event.key === 'Escape') { // Check if the pressed key is Escape
+    var resultsIncorrect = compareNotes(goldenNotes, incorrectStudentNotes);
+    console.log(resultsIncorrect);
+  }
+});
+
+var resultsTooMany = compareNotes(goldenNotes, tooManyStudentNotes);
 console.log(resultsTooMany);
 
 // Reset value of resultsText

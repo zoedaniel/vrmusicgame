@@ -4,10 +4,10 @@
 
 // 2. Identify notes for each recording (convert recording to list of notes)
 // TODO(zoe): hardcoding notes for now, utilize audio library later (mp3-->frequencies-->notes)
-var goldenNotes = ['A', 'D', 'C', 'B', 'A'];
-var perfectStudentNotes = ['A', 'D', 'C', 'B', 'A'];
-var incorrectStudentNotes = ['E', 'D', 'B', 'B', 'A'];
-var tooManyStudentNotes = ['A', 'D', 'C', 'B', 'A', 'G'];
+var goldenNotes = ['A', 'E', 'A', 'C#', 'F#', 'E', 'A', 'E', 'A', 'C#', 'F#', 'E'];
+var perfectStudentNotes = ['A', 'E', 'A', 'C#', 'F#', 'E', 'A', 'E', 'A', 'C#', 'F#', 'E'];
+var incorrectStudentNotes = ['A', 'E', 'A', 'C', 'F', 'E', 'A', 'E', 'A', 'C#', 'F', 'E'];
+var tooManyStudentNotes = ['A', 'E', 'A', 'C#', 'F#', 'E', 'A', 'E', 'A', 'C#', 'F#', 'E', 'A', 'E'];
 
 // 3. Compare the lists and identity/record differences 
 function compareNotes(goldenNotes, studentNotes) {

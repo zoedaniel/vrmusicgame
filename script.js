@@ -54,17 +54,20 @@ document.addEventListener('keydown', function(event) {
     console.log(resultsPerfect);
     var resultsTextElement = document.querySelector('#results-text');
     console.log(resultsTextElement);
-    resultsTextElement.value = resultsPerfect;
+    resultsTextElement.setAttribute('value', resultsPerfect);
+    console.log(resultsTextElement);
   } else if (event.key === 'Escape') { // Check if the pressed key is Escape
     var resultsIncorrect = compareNotes(goldenNotes, incorrectStudentNotes);
     console.log(resultsIncorrect);
     var resultsTextElement = document.querySelector('#results-text');
     console.log(resultsTextElement);
-    resultsTextElement.value = resultsIncorrect;
+    resultsTextElement.setAttribute('value', resultsIncorrect);
+    console.log(resultsTextElement);
   } else if (event.key === 'q') {
     var resultsTooMany = compareNotes(goldenNotes, tooManyStudentNotes);
     console.log(resultsTooMany);
     var resultsTextElement = document.querySelector('#results-text');
     console.log(resultsTextElement);
-    resultsTextElement.value = resultsTooMany;
+    resultsTextElement.setAttribute('value', resultsTooMany);
+    console.log(resultsTextElement);
 }});

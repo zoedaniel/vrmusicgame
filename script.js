@@ -50,6 +50,7 @@ function compareNotes(goldenNotes, studentNotes) {
 
 document.addEventListener('keydown', function(event) {
   if (event.key === 'Enter') { // if enter key is pressed, compare with perfect notes
+    document.querySelector('#violin-audio').play()
     var resultsPerfect = compareNotes(goldenNotes, perfectStudentNotes);
     console.log(resultsPerfect);
     var resultsTextElement = document.querySelector('#results-text');
@@ -57,6 +58,7 @@ document.addEventListener('keydown', function(event) {
     resultsTextElement.setAttribute('value', resultsPerfect);
     console.log(resultsTextElement);
   } else if (event.key === 'Escape') { // Check if the pressed key is Escape
+    document.querySelector('#violin-audio').play()
     var resultsIncorrect = compareNotes(goldenNotes, incorrectStudentNotes);
     console.log(resultsIncorrect);
     var resultsTextElement = document.querySelector('#results-text');
@@ -64,6 +66,7 @@ document.addEventListener('keydown', function(event) {
     resultsTextElement.setAttribute('value', resultsIncorrect);
     console.log(resultsTextElement);
   } else if (event.key === 'q') {
+    document.querySelector('#violin-audio').play()
     var resultsTooMany = compareNotes(goldenNotes, tooManyStudentNotes);
     console.log(resultsTooMany);
     var resultsTextElement = document.querySelector('#results-text');

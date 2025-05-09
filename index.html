@@ -45,7 +45,13 @@
            src="brick.png"
          >
       <audio 
-      id="violin-audio"
+      id="perfect-audio"
+      src="Virtual-Piano-4_14_07 PM.wav"></audio>
+      <audio 
+      id="incorrect-audio"
+      src="Virtual-Piano-4_14_07 PM.wav"></audio>
+      <audio 
+      id="too-many-notes-audio"
       src="Virtual-Piano-4_14_07 PM.wav"></audio>
       <a-asset-item
         id="guitar"
@@ -123,9 +129,15 @@
       align="center"
       position="3 2.5 -3.8"
         rotation="0 90 0"> </a-text>
-      <a-sound 
-    src="#violin-audio"
-    autoplay="true"></a-sound>
+    <a-sound 
+    src="#perfect-audio"
+    autoplay="false"></a-sound>
+    <a-sound 
+    src="#incorrect-audio"
+    autoplay="false"></a-sound>
+    <a-sound 
+    src="#too-many-notes-audio"
+    autoplay="false"></a-sound>
     <a-gltf-model
        src="#guitar"
        scale=".5 .5 .5" 

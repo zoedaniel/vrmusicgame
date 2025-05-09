@@ -46,25 +46,31 @@ function compareNotes(goldenNotes, studentNotes) {
   return resultsText;
 }
 
-// 4. Compare notes with selected recording between perfect, incorrect, and too many. show results to user.
-
+// 4. Play & compare notes with selected recording between perfect, incorrect, and too many notes.
+// Show results to user.
 document.addEventListener('keydown', function(event) {
-  if (event.key === 'Enter') { // if enter key is pressed, compare with perfect notes
+  var resultsTextElement = document.querySelector('#results-text');
+  if (event.key === '0') { // if 0 is pressed, play the teacher recording (no comparison)
+    document.querySelector('#perfect-audio').play(); // perfect == teacher :)
+  } else if (event.key === '1') { // if 1 is pressed, play & compare with perfect notes
+    document.querySelector('#perfect-audio').play();
     var resultsPerfect = compareNotes(goldenNotes, perfectStudentNotes);
     console.log(resultsPerfect);
-    var resultsTextElement = document.querySelector('#results-text');
     console.log(resultsTextElement);
-    resultsTextElement.value = resultsPerfect;
-  } else if (event.key === 'Escape') { // Check if the pressed key is Escape
+    resultsTextElement.setAttribute('value', resultsPerfect);
+    console.log(resultsTextElement);
+  } else if (event.key === '2') { // if 2 is pressed, play & compare with incorrect notes
+    document.querySelector('#incorrect-audio').play();
     var resultsIncorrect = compareNotes(goldenNotes, incorrectStudentNotes);
     console.log(resultsIncorrect);
-    var resultsTextElement = document.querySelector('#results-text');
     console.log(resultsTextElement);
-    resultsTextElement.value = resultsIncorrect;
-  } else if (event.key === 'q') {
+    resultsTextElement.setAttribute('value', resultsIncorrect);
+    console.log(resultsTextElement);
+  } else if (event.key === '3') { // if 3 is pressed, play & compare with too many notes
+    document.querySelector('#too-many-notes-audio').play();
     var resultsTooMany = compareNotes(goldenNotes, tooManyStudentNotes);
     console.log(resultsTooMany);
-    var resultsTextElement = document.querySelector('#results-text');
     console.log(resultsTextElement);
-    resultsTextElement.value = resultsTooMany;
+    resultsTextElement.setAttribute('value', resultsTooMany);
+    console.log(resultsTextElement);
 }});
